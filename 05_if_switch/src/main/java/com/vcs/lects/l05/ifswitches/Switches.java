@@ -2,18 +2,16 @@ package com.vcs.lects.l05.ifswitches;
 
 public class Switches {
 
-	public void sw() {
 
-	}
 
-	private String mood(int month) {
+	public String mood(int month) {
 
 		switch (month) {
 		case 12:
-
+		case 34:
 		case 1:
 		case 2:
-			return vasarosIsdetalizavimas(month);
+			return ziemosIsdetalizavimas(month);
 
 		case 3:
 		case 4:
@@ -21,6 +19,7 @@ public class Switches {
 			return "pavasaris ";
 		}
 		case 6:
+		
 		case 7:
 		case 8:
 			return "vasara ";
@@ -32,7 +31,7 @@ public class Switches {
 		return "pasimete laike :) ";
 	}
 
-	private String vasarosIsdetalizavimas(int month) {
+	private String ziemosIsdetalizavimas(int month) {
 		int abc = 3;
 		int d = 6 + month;
 		switch (d) {
