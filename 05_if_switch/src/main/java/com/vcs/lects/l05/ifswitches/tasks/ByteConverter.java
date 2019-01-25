@@ -2,7 +2,6 @@ package com.vcs.lects.l05.ifswitches.tasks;
 
 public class ByteConverter {
 
-	
 	/**
 	 * 0 bytes ...; 1kb ... ; 1Mb... 1Gb ... ; 1Tb and more;
 	 *
@@ -14,10 +13,11 @@ public class ByteConverter {
 	 * http://byteconvert.org/
 	 *
 	 */
-	
-	public Object convertToHumanReadable(long tb) {
-		// TODO Auto-generated method stub
-		return null;
+
+	public String convertToHumanReadable(long sizeInBytes) {
+
+		// TODO
+		return "";
 	}
 
 }
