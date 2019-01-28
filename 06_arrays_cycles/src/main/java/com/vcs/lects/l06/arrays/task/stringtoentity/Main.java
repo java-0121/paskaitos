@@ -1,4 +1,4 @@
-package com.vcs.lects.l06.arrays.task;
+package com.vcs.lects.l06.arrays.task.stringtoentity;
 
 public class Main {
 
