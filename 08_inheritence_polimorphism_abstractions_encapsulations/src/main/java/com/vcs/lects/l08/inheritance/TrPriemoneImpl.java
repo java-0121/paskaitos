@@ -29,6 +29,11 @@ public abstract class TrPriemoneImpl implements TtPriemone {
 		this.variklis = variklis;
 		this.spalva = "Pilka";
 	}
+	
+	
+	protected void uzvesk() {
+		
+	}
 
 	@Override
 	public String judeti() {

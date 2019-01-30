@@ -4,7 +4,7 @@ public class RealWorld {
 
 	public static void main(String[] args) {
 
-		// new Tesla();
+		 (new Tesla() {}).uzvesk();
 
 		TtPriemone[] parkingas = new TtPriemone[20];
 

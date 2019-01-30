@@ -2,12 +2,12 @@ package com.vcs.lects.l08.inheritance;
 
 public interface TtPriemone {
 
-	public String judeti();
+	String judeti();
 
-	public String getVariklis();
+	String getVariklis();
 
-	public void setVariklis(String variklis);
+	void setVariklis(String variklis);
 
-	public String getSpalva();
+	String getSpalva();
 
 }
