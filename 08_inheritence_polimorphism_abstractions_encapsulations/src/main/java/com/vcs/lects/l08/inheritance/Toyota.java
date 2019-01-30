@@ -1,6 +1,6 @@
 package com.vcs.lects.l08.inheritance;
 
-public class Toyota extends TRPriemone {
+public abstract class Toyota extends TrPriemoneImpl {
 
 	public Toyota(String variklis, String spalva) {
 		super(variklis, spalva);

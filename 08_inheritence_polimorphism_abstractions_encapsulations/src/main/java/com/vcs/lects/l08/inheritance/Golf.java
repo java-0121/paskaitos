@@ -1,6 +1,6 @@
 package com.vcs.lects.l08.inheritance;
 
-public class Golf extends TRPriemone {
+public class Golf extends TrPriemoneImpl {
 
 	public Golf(String variklis, String spalva) {
 		super(variklis, spalva);

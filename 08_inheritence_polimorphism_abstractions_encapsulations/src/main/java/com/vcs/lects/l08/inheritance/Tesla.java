@@ -1,6 +1,6 @@
 package com.vcs.lects.l08.inheritance;
 
-public class Tesla extends TRPriemone {
+public abstract class Tesla extends TrPriemoneImpl {
 
 	{
 		System.out.println("anon");
