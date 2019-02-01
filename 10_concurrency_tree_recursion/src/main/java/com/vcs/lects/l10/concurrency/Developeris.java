@@ -18,7 +18,6 @@ public class Developeris extends Thread {
 	public void suprogramuotiIstaisyti() {
 		// UUID.randomUUID().toString()
 		try {
-
 			// "Pamiegos" esamas thread'as
 			Thread.sleep(kaipDaznai);
 		} catch (InterruptedException e) {

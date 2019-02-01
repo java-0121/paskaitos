@@ -10,7 +10,9 @@ public class JiraTickets {
 	private List<String> tasks = new ArrayList<>();
 
 	public void addNew() {
-		tasks.add("" + ++taskNumber);
+		synchronized (tasks) {
+			tasks.add("" + ++taskNumber);
+		}
 	}
 
 	public int getTasksAmount() {
@@ -19,14 +21,17 @@ public class JiraTickets {
 
 	public boolean resolve() {
 
-		if (!tasks.isEmpty()) {
-			tasks.remove(0);
-			return true;
+		synchronized (tasks) {
+			Integer index = tasks.size();
+
+			if (!tasks.isEmpty()) {
+				tasks.remove(index - new Integer(1));
+				return true;
+			}
+
+			return false;
 		}
 
-		return false;
 	}
-	
-	
 
 }
