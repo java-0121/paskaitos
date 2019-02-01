@@ -31,8 +31,18 @@ public class VilniusMain {
 
 		VilniusMain vm = new VilniusMain();
 
-		System.out.println( vm.searchByName(vilnius, "  	 1     "));
+		System.out.println(vm.searchByName(vilnius, "  	 1     "));
 		System.out.println();
+		
+		System.out.println(vm.countElementsBy(vilnius, "  	 1     "));
+		System.out.println();
+
+	}
+
+	public int countElementsBy(Element el, String searchQuery) {
+
+		// TODO
+		return 0;
 	}
 
 	public ElementType searchByName(Element el, String searchQuery) {
