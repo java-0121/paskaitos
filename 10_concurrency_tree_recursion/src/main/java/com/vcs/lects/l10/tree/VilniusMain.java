@@ -33,7 +33,7 @@ public class VilniusMain {
 
 		System.out.println(vm.searchByName(vilnius, "  	 1     "));
 		System.out.println();
-		
+
 		System.out.println(vm.countElementsBy(vilnius, "  	 1     "));
 		System.out.println();
 
@@ -41,8 +41,19 @@ public class VilniusMain {
 
 	public int countElementsBy(Element el, String searchQuery) {
 
-		// TODO
-		return 0;
+		int counter = 0;
+
+		// Ta pati salyga patikrinimui... tik pagal pradzia ir ignoreCaseSensitive
+		if (el.getName().toLowerCase().startsWith(searchQuery.trim().toLowerCase())) {
+			counter++;
+		}
+
+		// skaiciuojam kiek radom vaikinese ir pridedam prie esamo
+		for (Element childElement : el.getElements()) {
+			counter += countElementsBy(childElement, searchQuery);
+		}
+
+		return counter;
 	}
 
 	public ElementType searchByName(Element el, String searchQuery) {
