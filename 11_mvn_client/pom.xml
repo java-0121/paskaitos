@@ -4,13 +4,27 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vcs.lects.l11.mvn.client</groupId>
 	<artifactId>11_mvn_client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>cloud.internal</id>
+			<name>Internal Release Repository</name>
+			<url>http://cloud:82/repository/internal/</url>
+		</repository>
+		<snapshotRepository>
+			<id>cloud.snapshots</id>
+			<name>Internal Snapshot Repository</name>
+			<url>http://cloud:82/repository/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 
 	<dependencies>
 		<dependency>
