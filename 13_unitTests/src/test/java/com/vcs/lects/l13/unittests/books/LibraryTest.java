@@ -89,6 +89,14 @@ public class LibraryTest {
 	}
 
 	@Test
+	public void getAvailableBookByNameNull() {
+
+		books.add(new Book("0", "a JAVA b", true));
+		library.getAvailableBookByName(null);
+
+	}
+
+	@Test
 	public void jiraTicket456465() {
 		books.add(new Book("0", "Java pradziamokslis", true));
 		books.add(new Book("1", "Java pazengusiems", true));

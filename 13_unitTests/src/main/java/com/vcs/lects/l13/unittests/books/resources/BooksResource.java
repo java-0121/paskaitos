@@ -19,6 +19,7 @@ public class BooksResource implements IBooksResource {
 		books.add(new Book("6", "As nenoriu mokytis", true));
 		books.add(new Book("7", "Kaip neperskaityti knygos", false));
 		books.add(new Book("8", "Kodinimas JAVA zemes ukyje", true));
+		books.add(new Book("ISBN-12324", "JS'as ir gyvenimas su juo... ir be jo", true));
 
 	}
 
