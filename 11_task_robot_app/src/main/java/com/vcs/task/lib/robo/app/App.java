@@ -1,6 +1,11 @@
 package com.vcs.task.lib.robo.app;
 
+import com.vcs.task.lib.robo.RoboEventHandlerProvider;
 import com.vcs.task.lib.robo.RoboLib;
+import com.vcs.task.lib.robo.handler.EventsListener;
+import com.vcs.task.lib.robo.handler.RoboEventsHandler;
+import com.vcs.task.lib.robo.steps.RoboStep;
+import com.vcs.task.lib.robo.steps.Step;
 
 public class App {
 	public static final void main(String[] dsf) {
@@ -24,7 +29,49 @@ public class App {
 		 */
 
 		RoboLib v = new RoboLib();
+		v.setRoboEventHandlerProvider(new RoboEventHandlerProvider() {
+
+			@Override
+			public RoboEventsHandler provideHandler() {
+				return new RoboEventsHandler() {
+
+					@Override
+					public void doTheJobFlow(RoboStep step) {
+						step.goForvard(2);
+						step.left(1);
+						step.goForvard(2);
+						step.right(1);
+						step.goForvard(3);
+						step.right(2);
+						step.analize();
+
+					}
+				};
+			}
+		});
 		v.init();
-		v.runRobo(null);
+		v.runRobo(new EventsListener() {
+
+			@Override
+			public void done(int x, int y, int pos) {
+				System.out.println("x,y = [" + x + "," + y + "] " + pos);
+			}
+
+			@Override
+			public void doAction(Step step, int count) {
+
+				switch (step) {
+				case LEFT:
+					System.out.println(Step.RIGHT + " " + count);
+					break;
+				case RIGHT:
+					System.out.println(Step.LEFT + " " + count);
+					break;
+				default:
+					System.out.println(step + " " + count);
+				}
+
+			}
+		});
 	}
 }
