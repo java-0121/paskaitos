@@ -3,6 +3,8 @@ package com.vcs.lects.l06.arrays.task.test;
 import static com.vcs.lects.l06.arrays.task.karoliukai.Karoliukai.EMPTY;
 
 import com.vcs.lects.l06.arrays.task.karoliukai.Karoliukai;
+import com.vcs.lects.l06.arrays.task.karoliukai.KaroliukaiSolutionImpl;
+import com.vcs.lects.l06.arrays.task.karoliukai.MazvileImpl;
 
 public class KaroliukaiTest {
 
@@ -42,7 +44,7 @@ public class KaroliukaiTest {
 				{ '0', '0', '0', '0', '0' } 
 				};
 
-		Karoliukai k = new Karoliukai();
+		KaroliukaiSolutionImpl k = new KaroliukaiSolutionImpl();
 
 		System.out.println(check(a2, k.rotateClockwise(a1, 47)) ? "Ok" : "fail");
 		System.out.println(check(b2, k.rotateClockwise(b1, 4)) ? "Ok" : "fail");
