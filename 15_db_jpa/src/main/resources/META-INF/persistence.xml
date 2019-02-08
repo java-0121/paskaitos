@@ -9,7 +9,7 @@
 
 
 		<properties>
-			<property name="current_session_context_class"
+			<!-- <property name="current_session_context_class"
 				value="thread" />
 			<property name="connection.driver_class"
 				value="org.h2.Driver" />
@@ -17,12 +17,18 @@
 				value="jdbc:h2:mem:test" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.H2Dialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://cloud/appdb" />
+            <property name="javax.persistence.jdbc.user" value="postgres" /> 
+            <property name="javax.persistence.jdbc.password" value="postgre" />
+            
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 
 
-
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
+			<!-- <property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" /> -->
 		</properties>
 
 

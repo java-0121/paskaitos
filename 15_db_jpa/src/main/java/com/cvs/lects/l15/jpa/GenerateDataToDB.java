@@ -34,7 +34,7 @@ public class GenerateDataToDB {
 
 		Random rnd = new Random();
 
-		int rndBound = rnd.nextInt(200);
+		int rndBound = rnd.nextInt(10000);
 
 		Person p = null;
 		for (int i = 0; i < rndBound; i++) {
@@ -42,6 +42,7 @@ public class GenerateDataToDB {
 			p.setName("Petras" + rnd.nextInt());
 			p.setSurname("Pavardauskas");
 			em.persist(p);
+		
 		}
 
 		em.getTransaction().commit();
