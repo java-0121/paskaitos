@@ -1,0 +1,11 @@
+curl -X POST \
+  http://localhost:8080/ \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: dac4a00d-030f-45e6-ab54-562a32611461' \
+  -d '{
+	"codeISBN" : "kjdkhsadkjhsakdhiwqye",
+	"name": "abc",
+	"author" : "Breberis",
+	"count" : 200
+}'

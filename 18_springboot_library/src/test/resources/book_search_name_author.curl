@@ -1,0 +1,5 @@
+curl -X GET \
+  http://localhost:8080/name/asdsad/author/Breberis \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 04ffcc26-6216-434c-acf7-cfe3e3477d46'
