@@ -12,7 +12,7 @@ public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Long id;
 
 	@NotBlank
 	private String codeISBN;
@@ -26,24 +26,11 @@ public class Book {
 	@PositiveOrZero
 	private int count;
 
-	// public Book() {
-	//
-	// }
-	//
-	// public Book(Integer id, String codeISBN, String name, String author, int
-	// count) {
-	// this.id = id;
-	// this.codeISBN = codeISBN;
-	// this.name = name;
-	// this.author = author;
-	// this.count = count;
-	// }
-
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

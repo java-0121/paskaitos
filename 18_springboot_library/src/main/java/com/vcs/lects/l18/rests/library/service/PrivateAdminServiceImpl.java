@@ -3,8 +3,6 @@ package com.vcs.lects.l18.rests.library.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +10,7 @@ import com.vcs.lects.l18.rests.library.entities.Book;
 import com.vcs.lects.l18.rests.library.repositories.BookRepository;
 
 @Service
-public class LibraryServiceImpl implements LibraryService {
+public class PrivateAdminServiceImpl implements PrivateAdminService {
 
 	@Autowired
 	private BookRepository bookRepository;
@@ -38,13 +36,8 @@ public class LibraryServiceImpl implements LibraryService {
 	}
 
 	@Override
-	public List<Book> findByName(String name) {
-		return bookRepository.findByName(name);
-	}
-
-	@Override
-	public List<Book> findByAuthorOrName(String author, String name) {
-		return bookRepository.findByAuthorOrName(author, name);
+	public void saveAll(List<Book> books) {
+		bookRepository.saveAll(books);
 	}
 
 }
